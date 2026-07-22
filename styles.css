@@ -135,19 +135,19 @@ p {
 
 .logo-img {
   display: block !important;
-  width: 7.5rem !important;
-  max-width: 7.5rem !important;
-  height: 2rem !important;
-  max-height: 2rem !important;
+  width: 10.5rem !important;
+  max-width: 10.5rem !important;
+  height: 3.5rem !important;
+  max-height: 3.5rem !important;
   object-fit: contain !important;
   object-position: center;
 }
 
 .logo-img--sm {
-  width: 6rem !important;
-  max-width: 6rem !important;
-  height: 1.65rem !important;
-  max-height: 1.65rem !important;
+  width: 8.5rem !important;
+  max-width: 8.5rem !important;
+  height: 2.85rem !important;
+  max-height: 2.85rem !important;
 }
 
 .nav {
@@ -304,10 +304,10 @@ p {
 
 .brand-logo {
   display: block !important;
-  width: min(70vw, 15rem) !important;
-  max-width: 15rem !important;
-  height: 4.25rem !important;
-  max-height: 4.25rem !important;
+  width: min(85vw, 26rem) !important;
+  max-width: 26rem !important;
+  height: 8.5rem !important;
+  max-height: 8.5rem !important;
   margin: 0 0 1.1rem !important;
   object-fit: contain !important;
   object-position: left center;
