@@ -14,8 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Josefin+Sans:wght@300;400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="assets/logo-impacto-eventos.png?v=7" type="image/png" />
-    <link rel="stylesheet" href="styles.css?v=7" />
+    <link rel="icon" href="assets/logo-impacto-eventos.png?v=8" type="image/png" />
+    <link rel="stylesheet" href="styles.css?v=8" />
   </head>
   <body>
     <div class="noise" aria-hidden="true"></div>
@@ -24,7 +24,7 @@
       <a class="logo" href="#top" aria-label="Impacto Eventos inicio">
         <img
           class="logo-img"
-          src="assets/logo-impacto-eventos.png?v=7"
+          src="assets/logo-impacto-eventos.png?v=8"
           alt="Impacto Eventos"
           style="width:170px;height:56px;object-fit:contain;display:block;"
         />
@@ -32,6 +32,7 @@
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="#servicios">Servicios</a>
         <a href="#espacio">El salón</a>
+        <a href="#agenda">Agenda</a>
         <a href="#momentos">Momentos</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -149,6 +150,70 @@
         </figure>
       </section>
 
+      <section class="section agenda" id="agenda">
+        <div class="section-intro">
+          <h2>Agenda</h2>
+          <p class="section-copy">
+            Elegí una fecha disponible y dejá tus datos. El salón recibe la
+            solicitud y te confirma.
+          </p>
+        </div>
+
+        <div class="agenda-layout">
+          <div class="agenda-calendar reveal">
+            <div class="agenda-calendar-head">
+              <button type="button" class="agenda-nav-btn" id="agendaPrev" aria-label="Mes anterior">‹</button>
+              <h3 id="agendaMonthLabel">Mes</h3>
+              <button type="button" class="agenda-nav-btn" id="agendaNext" aria-label="Mes siguiente">›</button>
+            </div>
+            <div class="agenda-grid" id="agendaGrid"></div>
+            <div class="agenda-legend">
+              <span><i class="dot dot-free"></i> Disponible</span>
+              <span><i class="dot dot-booked"></i> Reservada</span>
+              <span><i class="dot dot-selected"></i> Seleccionada</span>
+            </div>
+          </div>
+
+          <form class="agenda-form reveal" id="agendaForm" hidden>
+            <h3>Solicitar reserva</h3>
+            <p class="agenda-selected" id="agendaSelectedDate">Elegí una fecha disponible</p>
+            <input type="hidden" name="event_date" />
+
+            <label>
+              Nombre y apellido
+              <input type="text" name="client_name" required autocomplete="name" />
+            </label>
+            <label>
+              Teléfono / WhatsApp
+              <input type="tel" name="client_phone" required autocomplete="tel" placeholder="3764..." />
+            </label>
+            <label>
+              Tipo de evento
+              <select name="event_type" required>
+                <option value="15 años">15 años</option>
+                <option value="Cumpleaños">Cumpleaños</option>
+                <option value="Casamiento">Casamiento</option>
+                <option value="Corporativo">Corporativo</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </label>
+            <label>
+              Cantidad estimada de invitados
+              <input type="number" name="guests" min="1" max="1000" />
+            </label>
+            <label>
+              Notas
+              <textarea name="notes" rows="3" placeholder="Horario aproximado, servicios, etc."></textarea>
+            </label>
+
+            <button class="btn btn-whatsapp" type="submit" id="agendaSubmit">
+              Enviar solicitud
+            </button>
+            <p class="agenda-status" id="agendaStatus"></p>
+          </form>
+        </div>
+      </section>
+
       <section class="section moments" id="momentos">
         <div class="moments-header">
           <div>
@@ -197,9 +262,10 @@
         <div class="contact-panel">
           <h2>Contacto</h2>
           <p class="section-copy">
-            Consultá disponibilidad por WhatsApp o Instagram.
+            Reservá por la agenda del sitio, WhatsApp o Instagram.
           </p>
           <div class="contact-actions">
+            <a class="btn" href="#agenda">Ir a la agenda</a>
             <a
               class="btn btn-whatsapp"
               href="https://wa.me/543764836208?text=Hola%20Impacto%20Eventos%2C%20quiero%20consultar%20por%20una%20fecha"
@@ -260,13 +326,16 @@
       <div class="footer-brand">
         <img
           class="logo-img logo-img--sm"
-          src="assets/logo-impacto-eventos.png?v=7"
+          src="assets/logo-impacto-eventos.png?v=8"
           alt="Impacto Eventos"
           style="width:140px;height:48px;object-fit:contain;display:block;"
         />
         <span class="footer-place">Posadas</span>
       </div>
-      <p>© <span id="year"></span> Impacto Eventos. Todos los derechos reservados.</p>
+      <p>
+        © <span id="year"></span> Impacto Eventos.
+        <a class="footer-admin" href="admin.html">Agenda admin</a>
+      </p>
     </footer>
 
     <a
@@ -284,6 +353,9 @@
       </svg>
     </a>
 
-    <script src="script.js?v=7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js?v=8"></script>
+    <script src="script.js?v=8"></script>
+    <script src="agenda.js?v=8"></script>
   </body>
 </html>

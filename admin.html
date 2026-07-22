@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda | Impacto Eventos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Josefin+Sans:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/logo-impacto-eventos.png?v=8" type="image/png" />
+    <link rel="stylesheet" href="styles.css?v=8" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-shell">
+      <header class="admin-header">
+        <div>
+          <p class="eyebrow">Panel privado</p>
+          <h1>Agenda de reservas</h1>
+        </div>
+        <a class="btn btn-ghost" href="./">Volver al sitio</a>
+      </header>
+
+      <section class="admin-card" id="adminLogin">
+        <h2>Ingresar</h2>
+        <p class="section-copy">Usá el PIN del salón para ver las reservas.</p>
+        <form id="adminLoginForm" class="admin-login-form">
+          <label>
+            PIN
+            <input type="password" name="pin" required autocomplete="current-password" />
+          </label>
+          <button class="btn" type="submit">Entrar</button>
+        </form>
+        <p class="agenda-status" id="adminLoginStatus"></p>
+      </section>
+
+      <section class="admin-panel" id="adminPanel" hidden>
+        <div class="admin-toolbar">
+          <div class="admin-filters">
+            <label>
+              Estado
+              <select id="adminFilter">
+                <option value="todas">Todas</option>
+                <option value="pendiente">Pendientes</option>
+                <option value="confirmada">Confirmadas</option>
+                <option value="cancelada">Canceladas</option>
+              </select>
+            </label>
+          </div>
+          <button class="btn btn-ghost" type="button" id="adminRefresh">Actualizar</button>
+        </div>
+        <p class="agenda-status" id="adminStatus"></p>
+        <div class="admin-list" id="adminList"></div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js?v=8"></script>
+    <script src="admin.js?v=8"></script>
+  </body>
+</html>
