@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Impacto Eventos</title>
+  <text
+    x="20"
+    y="118"
+    fill="#ffffff"
+    font-family="Arial Black, Impact, Haettenschweiler, sans-serif"
+    font-size="92"
+    font-weight="900"
+    letter-spacing="2"
+  >IMPACTO</text>
+  <text
+    x="620"
+    y="188"
+    fill="#E85C7A"
+    font-family="Arial Black, Impact, Haettenschweiler, sans-serif"
+    font-size="42"
+    font-weight="800"
+    letter-spacing="4"
+    text-anchor="end"
+  >EVENTOS</text>
+</svg>

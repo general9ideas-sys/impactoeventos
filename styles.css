@@ -6,6 +6,8 @@
   --muted: rgba(245, 242, 234, 0.68);
   --gold: #d4af37;
   --gold-soft: #f0d78c;
+  --coral: #e85c7a;
+  --coral-soft: #f08090;
   --line: rgba(245, 242, 234, 0.12);
   --whatsapp: #25d366;
   --whatsapp-deep: #1ebe57;
@@ -14,7 +16,8 @@
   --header-h: 4.5rem;
   --max: 72rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --font-display: "Cinzel", "Times New Roman", serif;
+  --font-logo: "Archivo Black", "Arial Black", Impact, sans-serif;
+  --font-display: "Archivo Black", "Arial Black", Impact, sans-serif;
   --font-body: "Josefin Sans", sans-serif;
 }
 
@@ -55,11 +58,9 @@ a {
 
 h1,
 h2,
-h3,
-.brand-lockup,
-.logo-text {
+h3 {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.04em;
   line-height: 1.12;
   text-transform: uppercase;
@@ -67,23 +68,21 @@ h3,
 
 h1 {
   margin: 0;
-  font-size: clamp(1.85rem, 5.2vw, 3.4rem);
+  font-size: clamp(1.55rem, 4.4vw, 2.6rem);
   max-width: 18ch;
-  font-weight: 500;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
 }
 
 h2 {
   margin: 0;
-  font-size: clamp(1.7rem, 3.8vw, 2.7rem);
+  font-size: clamp(1.45rem, 3.4vw, 2.2rem);
   max-width: 14ch;
-  font-weight: 500;
 }
 
 h3 {
   margin: 0 0 0.4rem;
-  font-size: 1.2rem;
-  letter-spacing: 0.08em;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
 }
 
 p {
@@ -125,28 +124,39 @@ p {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
   z-index: 2;
 }
 
-.logo-mark {
+.logo-wordmark {
   display: grid;
-  place-items: center;
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: 0.7rem;
-  background: linear-gradient(145deg, #2a2416, #151515);
-  color: var(--gold-soft);
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 700;
+  justify-items: end;
+  line-height: 0.88;
+  font-family: var(--font-logo);
+  text-transform: uppercase;
 }
 
-.logo-text {
-  font-size: 0.95rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.logo-impacto {
+  display: block;
+  color: #fff;
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  justify-self: start;
+}
+
+.logo-eventos {
+  display: block;
+  margin-top: 0.12rem;
+  color: var(--coral);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+}
+
+.logo-wordmark--sm .logo-impacto {
+  font-size: 1.05rem;
+}
+
+.logo-wordmark--sm .logo-eventos {
+  font-size: 0.5rem;
 }
 
 .nav {
@@ -302,17 +312,35 @@ p {
 }
 
 .brand-lockup {
-  margin-bottom: 0.85rem;
-  font-size: clamp(2.4rem, 7.5vw, 5.4rem);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: #fff;
+  display: grid;
+  justify-items: end;
+  margin: 0 0 1rem;
+  font-family: var(--font-logo);
+  text-transform: uppercase;
+  line-height: 0.86;
   text-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
   animation: rise 1s var(--ease) both;
 }
 
+.brand-lockup .logo-impacto {
+  font-size: clamp(3.2rem, 12vw, 7.5rem);
+  letter-spacing: 0.02em;
+  justify-self: start;
+}
+
+.brand-lockup .logo-eventos {
+  margin-top: 0.2rem;
+  font-size: clamp(1.15rem, 3.8vw, 2.35rem);
+  letter-spacing: 0.16em;
+  color: var(--coral-soft);
+}
+
 .hero h1 {
-  color: var(--gold-soft);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.01em;
   animation: rise 1s var(--ease) 0.12s both;
 }
 
@@ -592,15 +620,17 @@ p {
 .footer-brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 1rem;
   font-weight: 600;
   color: var(--ink);
 }
 
-.footer-brand .logo-mark {
-  width: 2rem;
-  height: 2rem;
-  font-size: 0.72rem;
+.footer-place {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .whatsapp-float {
