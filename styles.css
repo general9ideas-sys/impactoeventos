@@ -135,16 +135,15 @@ p {
 
 .logo-img {
   display: block;
-  width: auto;
-  height: 2.6rem;
-  max-height: 2.6rem;
+  width: 7.5rem;
+  height: 2rem;
   object-fit: contain;
-  object-position: left center;
+  object-position: center;
 }
 
 .logo-img--sm {
-  height: 2.1rem;
-  max-height: 2.1rem;
+  width: 6rem;
+  height: 1.65rem;
 }
 
 .nav {
@@ -301,9 +300,9 @@ p {
 
 .brand-logo {
   display: block;
-  width: min(100%, 34rem);
-  height: auto;
-  margin: 0 0 1rem;
+  width: min(72vw, 16rem);
+  height: 4.25rem;
+  margin: 0 0 1.1rem;
   object-fit: contain;
   object-position: left center;
   filter: drop-shadow(0 12px 40px rgba(0, 0, 0, 0.45));
