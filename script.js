@@ -66,3 +66,20 @@ if (momentsTrack) {
     momentsTrack.appendChild(clone);
   });
 }
+
+const brandImpact = document.querySelector(".brand-impact");
+
+if (brandImpact) {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (reduceMotion) {
+    brandImpact.classList.add("is-ready");
+  } else {
+    requestAnimationFrame(() => {
+      brandImpact.classList.add("is-ready");
+      window.setTimeout(() => {
+        brandImpact.classList.add("is-hit");
+      }, 780);
+    });
+  }
+}
