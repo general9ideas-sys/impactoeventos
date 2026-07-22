@@ -79,7 +79,7 @@ if (brandImpact) {
       brandImpact.classList.add("is-ready");
       window.setTimeout(() => {
         brandImpact.classList.add("is-hit");
-      }, 780);
+      }, 2700);
     });
   }
 }

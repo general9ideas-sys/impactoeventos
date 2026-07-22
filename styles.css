@@ -346,7 +346,7 @@ p {
 }
 
 .brand-impact.is-ready .brand-impact__eventos {
-  animation: impact-from-right 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.08s forwards;
+  animation: impact-from-right 0.85s cubic-bezier(0.16, 1, 0.3, 1) 2s forwards;
 }
 
 .brand-impact__flash {
@@ -373,7 +373,7 @@ p {
   text-transform: none;
   letter-spacing: 0.01em;
   opacity: 0;
-  animation: rise 0.9s var(--ease) 0.95s both;
+  animation: rise 0.9s var(--ease) 2.9s both;
 }
 
 .hero-lead {
@@ -382,7 +382,7 @@ p {
   font-size: 1.12rem;
   color: var(--muted);
   opacity: 0;
-  animation: rise 0.9s var(--ease) 1.05s both;
+  animation: rise 0.9s var(--ease) 3s both;
 }
 
 .hero-actions {
@@ -391,7 +391,7 @@ p {
   gap: 0.8rem;
   margin-top: 1.8rem;
   opacity: 0;
-  animation: rise 0.9s var(--ease) 1.15s both;
+  animation: rise 0.9s var(--ease) 3.1s both;
 }
 
 .section {
